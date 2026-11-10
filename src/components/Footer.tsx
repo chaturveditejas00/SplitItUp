@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Heart, Sparkles, Github, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowUpRight, Heart, Sparkles, Github, Instagram, ShieldCheck, Zap } from 'lucide-react';
 import { Marquee } from './react-bits/Marquee';
 import { useTheme } from '../context/ThemeContext';
 
@@ -107,8 +107,18 @@ export const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* Col 3: GitHub Repo link & copyright */}
-          <div className="flex items-center justify-center md:justify-end gap-4">
+          {/* Col 3: Social & GitHub Links */}
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-3">
+            <a
+              href="https://www.instagram.com/tejas_chaturvedii27/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-full glass border border-[var(--border-color)] text-[var(--text-primary)] hover:border-[#FF2A6D]/60 hover:text-[#FF2A6D] transition-all cursor-pointer shadow-sm group"
+            >
+              <Instagram className="w-3.5 h-3.5 text-[#FF2A6D] group-hover:scale-110 transition-transform" />
+              <span>@tejas_chaturvedii27</span>
+            </a>
+
             <a
               href="https://github.com/chaturveditejas00/SplitItUp"
               target="_blank"
@@ -116,7 +126,7 @@ export const Footer: React.FC = () => {
               className="inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-full glass border border-[var(--border-color)] text-[var(--text-primary)] hover:border-[#FE5101]/50 hover:text-[#FE5101] transition-all cursor-pointer shadow-sm"
             >
               <Github className="w-3.5 h-3.5" />
-              <span>SplitItUp on GitHub</span>
+              <span>SplitItUp</span>
             </a>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { Instagram } from 'lucide-react';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { Waves } from './components/react-bits/Waves';
 import { Header } from './components/Header';
@@ -364,6 +365,24 @@ function MainApp() {
 
       {/* Large Typography & Marquee Footer */}
       <Footer />
+
+      {/* Floating Instagram Link on Bottom Right */}
+      <aside className="fixed bottom-5 right-5 z-40">
+        <a
+          href="https://www.instagram.com/tejas_chaturvedii27/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow Tejas Chaturvedi on Instagram"
+          className="group flex items-center gap-2.5 px-3.5 py-2 rounded-full glass border border-white/10 hover:border-[#FF2A6D]/60 bg-black/60 dark:bg-black/80 backdrop-blur-xl text-white shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
+        >
+          <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#F56040] to-[#C13584] flex items-center justify-center text-white shadow-sm">
+            <Instagram className="w-3.5 h-3.5" />
+          </div>
+          <span className="text-xs font-bold tracking-tight pr-1 hidden sm:inline-block group-hover:text-[#FF2A6D] transition-colors">
+            @tejas_chaturvedii27
+          </span>
+        </a>
+      </aside>
     </div>
   );
 }
